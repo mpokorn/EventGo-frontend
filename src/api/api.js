@@ -47,7 +47,7 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    console.error('❌ API Error:', {
+    console.error('API Error:', {
       url: error.config?.url,
       method: error.config?.method,
       status: error.response?.status,
