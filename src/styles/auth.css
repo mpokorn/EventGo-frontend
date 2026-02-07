@@ -1,0 +1,383 @@
+/* Styles specific to Login and Register pages */
+body {
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+}
+
+/* Page layout */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+}
+
+/* Organizer-specific theme - White Background */
+.auth-page.organizer-theme {
+  background: transparent;
+}
+
+/* Keep card styling same as normal login */
+.auth-page.organizer-theme .auth-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(var(--blur-md));
+  box-shadow: var(--shadow-xl);
+}
+
+/* Keep input styling same as normal login */
+.auth-page.organizer-theme input[type="email"],
+.auth-page.organizer-theme input[type="password"],
+.auth-page.organizer-theme input[type="text"] {
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.auth-page.organizer-theme input:focus {
+  border-color: var(--color-border-focus);
+  background: var(--color-surface-hover);
+}
+
+.auth-page.organizer-theme label {
+  color: var(--color-text-secondary);
+}
+
+/* Only adjust headings and descriptions for visibility */
+.auth-page.organizer-theme .text-white {
+  color: var(--color-text-primary) !important;
+}
+
+.auth-page.organizer-theme .text-gray-300 {
+  color: var(--color-text-secondary) !important;
+}
+
+.auth-page.organizer-theme .btn-primary {
+  background: linear-gradient(90deg, var(--color-bg-secondary), var(--color-bg-primary));
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.auth-page.organizer-theme .btn-primary:hover {
+  filter: brightness(1.15);
+  box-shadow: var(--shadow-md);
+}
+
+.auth-page.organizer-theme .btn-secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-text-secondary);
+}
+
+.auth-page.organizer-theme .btn-secondary:hover {
+  background: var(--color-surface-glass);
+  border-color: var(--color-text-primary);
+}
+
+.auth-page.organizer-theme .auth-link {
+  color: var(--color-organizer-primary);
+  font-weight: 500;
+}
+
+.auth-page.organizer-theme .auth-link:hover {
+  color: var(--color-organizer-secondary);
+}
+
+.auth-page.organizer-theme .auth-link-button {
+  color: var(--color-organizer-primary);
+  font-weight: 500;
+}
+
+.auth-page.organizer-theme .auth-link-button:hover {
+  color: var(--color-organizer-secondary);
+}
+
+.auth-page.organizer-theme .password-toggle {
+  color: var(--color-text-tertiary);
+}
+
+.auth-page.organizer-theme .password-toggle:hover {
+  color: var(--color-text-secondary);
+}
+
+/* Container for the auth card */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(var(--blur-md));
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-xl);
+  transition: all var(--transition-slow);
+}
+
+.auth-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.75);
+}
+
+/* Responsive scaling */
+@media (min-width: 768px) {
+  .auth-card {
+    max-width: 480px;
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .auth-card {
+    max-width: 500px;
+    padding: var(--space-2xl);
+  }
+}
+
+/* Form inputs inside auth card */
+.auth-card input[type="email"],
+.auth-card input[type="password"],
+.auth-card input[type="text"] {
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0.75rem var(--space-md);
+  font-size: 0.96rem;
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-base), background var(--transition-base);
+}
+
+.auth-card input:focus {
+  border-color: var(--color-border-focus);
+  background: var(--color-surface-hover);
+  outline: none;
+}
+
+/* Labels */
+.auth-card label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-secondary);
+}
+
+/* Error box */
+.auth-error {
+  background: var(--color-error-bg);
+  border-left: 4px solid var(--color-error);
+  padding: 0.75rem;
+  color: var(--color-error);
+  border-radius: var(--radius-sm);
+}
+
+/* Row with remember + forgot link */
+.auth-card .auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.auth-card .remember {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Actions */
+.auth-card .auth-actions {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--space-md);
+}
+
+/* Gradient button */
+.btn-primary {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  color: var(--color-text-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.9rem var(--space-lg);
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-slow);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.btn-primary:active {
+  transform: translateY(1px);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Footer */
+.auth-card .auth-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-xl);
+}
+
+.auth-card .auth-footer a {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-left: var(--space-xs);
+  transition: color var(--transition-base);
+}
+
+.auth-card .auth-footer a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Footer links */
+.auth-link {
+  color: var(--color-organizer-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-base);
+}
+
+.auth-link:hover {
+  color: var(--color-organizer-secondary);
+}
+
+/* Footer button styled as link */
+.auth-link-button {
+  color: var(--color-organizer-primary);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: inherit;
+  padding: 0;
+  transition: color var(--transition-base);
+}
+
+.auth-link-button:hover {
+  color: var(--color-organizer-secondary);
+}
+
+/* Secondary button (outlined style) */
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-organizer-primary);
+  border-radius: var(--radius-md);
+  padding: 0.9rem var(--space-lg);
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface-glass);
+  border-color: var(--color-organizer-secondary);
+}
+
+/* Password input wrapper */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  padding-right: 2.5rem;
+}
+
+/* Password toggle button */
+.password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-tertiary);
+  padding: var(--space-xs);
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-base);
+}
+
+.password-toggle:hover {
+  color: var(--color-text-secondary);
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-gray-300 {
+  color: var(--color-text-secondary);
+}
+
+.text-white {
+  color: var(--color-text-primary);
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Margin utilities */
+.mb-6 {
+  margin-bottom: var(--space-lg);
+}
+
+.mt-2 {
+  margin-top: var(--space-sm);
+}
+
+/* Consistent vertical spacing in form */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .auth-card {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+  }
+}

@@ -1,0 +1,215 @@
+.event-detail-page {
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  color: var(--color-text-secondary);
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+}
+
+/* LOADING MESSAGE */
+.loading-message {
+  color: var(--color-text-primary);
+  text-align: center;
+  padding: var(--space-xl);
+  font-size: 1.1rem;
+}
+
+/* HEADER */
+.event-detail-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-detail-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.event-detail-subtitle {
+  color: var(--color-text-tertiary);
+  margin-top: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+/* MAIN LAYOUT */
+.event-detail-main {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: var(--space-xl);
+  grid-template-columns: 1fr 1fr;
+}
+
+/* CARDS */
+.event-detail-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(var(--blur-md));
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+}
+
+/* EVENT INFO */
+.event-detail-info-card h3 {
+  font-size: 1.4rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.event-detail-info-list p {
+  margin-bottom: 0.7rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-detail-info-list p svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.event-detail-info-list span {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.event-about-description {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* INPUTS */
+.event-detail-label {
+  margin-top: var(--space-md);
+  display: block;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.event-detail-input {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.7rem var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-glass);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: all var(--transition-base);
+}
+
+.event-detail-input:focus {
+  border-color: var(--color-border-focus);
+  background: var(--color-surface-hover);
+}
+
+.event-detail-input-small {
+  width: 120px;
+}
+
+/* BUTTON */
+.event-detail-btn {
+  width: 100%;
+  margin-top: var(--space-lg);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  padding: 0.9rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-slow);
+}
+
+.event-detail-btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* MESSAGE BOXES */
+.event-detail-message {
+  margin: var(--space-xl) auto;
+  max-width: 600px;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: 600;
+}
+
+.event-detail-message.success {
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: var(--color-success);
+}
+
+.event-detail-message.error {
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  color: var(--color-error);
+}
+
+.event-detail-no-tickets {
+  color: var(--color-text-tertiary);
+}
+
+/* Past Event Notice */
+.past-event-notice {
+  text-align: center;
+  padding: var(--space-xl);
+  background: rgba(156, 163, 175, 0.1);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-border);
+}
+
+.past-event-notice .event-detail-no-tickets {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.past-event-notice .event-detail-subtitle {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+/* Small-screen layout */
+@media (max-width: 768px) {
+  .event-detail-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* SELECT (ticket type) */
+.event-detail-select {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.7rem var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-glass);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: all var(--transition-base);
+}
+
+.event-detail-select:focus {
+  border-color: var(--color-border-focus);
+  background: var(--color-surface-hover);
+}
+
+/* Make dropdown options readable */
+.event-detail-select option {
+  color: var(--color-bg-primary);
+  background-color: var(--color-text-primary);
+}
