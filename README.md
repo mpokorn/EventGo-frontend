@@ -1,16 +1,69 @@
-# React + Vite
+# EventGO Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, responsive web application for the EventGO event management platform, built with React and Vite.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+EventGO Frontend is a single-page application (SPA) that provides an intuitive interface for browsing events, purchasing tickets, and managing event attendance. It features separate dashboards for regular users and event organizers.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Key Capabilities
 
-## Expanding the ESLint configuration
+- **Event Discovery**: Browse, search, and filter events
+- **Ticket Purchase**: Secure ticket purchasing with multiple payment methods
+- **User Dashboard**: Manage tickets, view transaction history
+- **Organizer Dashboard**: Create and manage events, view analytics
+- **Waitlist Management**: Join waitlists for sold-out events
+- **Responsive Design**: Mobile-first, works on all devices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+### For Users
+- Browse upcoming and past events
+- Advanced search and filtering
+- Purchase tickets with instant confirmation
+- Join waitlists for sold-out events
+- Request ticket refunds
+- View purchase history
+- Manage profile settings
+
+### For Organizers
+- Create and edit events
+- Define multiple ticket types
+- View real-time sales analytics
+- Monitor ticket sales and revenue
+- Manage attendee refunds
+- Export event reports
+
+### General
+- JWT-based authentication with automatic token refresh
+- Responsive mobile-first design
+- Toast notifications for user feedback
+- Loading states and error handling
+- Protected routes based on user roles
+
+---
+
+## Tech Stack
+
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Routing**: React Router DOM v6
+- **HTTP Client**: Axios
+- **Styling**: CSS3 with CSS Modules
+- **Icons**: React Icons
+- **Notifications**: React Toastify
+- **Date Handling**: date-fns / native JS Date
+- **Charts**: Recharts (for analytics)
+
+
+---
+
+## Related Projects
+
+- **Backend**: [EventGO-backend](../EventGO-backend/)
+- **Mobile App**: [EventGO-mobile-app](../EventGO-mobile-app/)
+
+---
