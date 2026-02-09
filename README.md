@@ -54,7 +54,7 @@ EventGO Frontend is a single-page application (SPA) that provides an intuitive i
 
 ## Related Projects
 
-- **Backend**: [EventGO-backend](https://github.com/mpokorn/EventGo-backend) (local: `../EventGO-backend/`)
-- **Mobile App**: [EventGO-mobile-app](https://github.com/mpokorn/EventGo-mobile-app) (local: `../EventGO-mobile-app/`)
+- **Backend**: [EventGO-backend](https://github.com/mpokorn/EventGo-backend) 
+- **Mobile App**: [EventGO-mobile-app](https://github.com/mpokorn/EventGo-mobile-app) 
 
 ---
