@@ -23,9 +23,8 @@ EventGO Frontend is a single-page application (SPA) that provides an intuitive i
 ### For Users
 - Browse upcoming and past events
 - Advanced search and filtering
-- Purchase tickets with instant confirmation
+- Purchase tickets 
 - Join waitlists for sold-out events
-- Request ticket refunds
 - View purchase history
 - Manage profile settings
 
@@ -35,14 +34,6 @@ EventGO Frontend is a single-page application (SPA) that provides an intuitive i
 - View real-time sales analytics
 - Monitor ticket sales and revenue
 - Manage attendee refunds
-- Export event reports
-
-### General
-- JWT-based authentication with automatic token refresh
-- Responsive mobile-first design
-- Toast notifications for user feedback
-- Loading states and error handling
-- Protected routes based on user roles
 
 ---
 
